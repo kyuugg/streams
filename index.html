@@ -4,15 +4,60 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap"
+            rel="stylesheet"
+        />
         <title>Twitch Multistream Viewer - streams.kyuu.gg</title>
     </head>
     <body>
         <div id="layout">
-            <aside id="sidebar"></aside>
+            <aside id="sidebar">
+                <div id="sidebar-content">
+                    <input
+                        class="sidebar-search"
+                        type="text"
+                        placeholder="streamername: e.g. ayukyuu"
+                    />
+                    <nav>
+                        <button class="sidebar-item">streamer</button><br />
+                        <button class="sidebar-item">streamer</button><br />
+                        <button class="sidebar-item">streamer</button><br />
+                        <button class="sidebar-item">streamer</button><br />
+                        <button class="sidebar-item">streamer</button><br />
+                        <button class="sidebar-item">streamer</button><br />
+                        <button class="sidebar-item">streamer</button><br />
+                        <button class="sidebar-item">streamer</button><br />
+                        <button class="sidebar-item">streamer</button><br />
+                        <button class="sidebar-item">streamer</button><br />
+                        <button class="sidebar-item">streamer</button><br />
+                        <button class="sidebar-item">streamer</button><br />
+                    </nav>
+                </div>
+            </aside>
             <main id="stream">
-                <!-- insert iframe with id = "stream-item" here -->
+                <iframe
+                    src="https://player.twitch.tv/?channel=ishowspeed&parent=127.0.0.1"
+                    allowfullscreen
+                    id="stream-frame"
+                >
+                </iframe>
             </main>
         </div>
-        <footer id="footer"></footer>
+        <footer id="footer">
+            <img
+                id="footer-logo"
+                src="images/kyuugglogo.png"
+                alt=""
+                width="24px"
+                height="28px"
+            />
+            <p id="footer-text">
+                &copy; 2026 KyuuGG (ayukyuu). All rights reserved. Not
+                affiliated with Twitch.
+            </p>
+        </footer>
     </body>
 </html>
