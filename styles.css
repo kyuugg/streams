@@ -71,9 +71,10 @@ input {
 
 .sidebar-item:hover {
     background-color: rgb(38, 0, 46);
+    cursor: pointer;
 }
 
-.sidebar-search {
+#sidebar-search {
     border-width: 2px;
     border-color: rgb(40, 40, 40);
     border-style: solid;
