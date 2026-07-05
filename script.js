@@ -1,6 +1,7 @@
 const nav = document.querySelector("#buttons-nav");
 const input = document.querySelector("#sidebar-input");
 const streamFrame = document.querySelector("#stream-frame");
+const heading = document.querySelector("#stream-name");
 
 function generateSource(streamer) {
     return `https://player.twitch.tv/?channel=${streamer}&parent=127.0.0.1`;
@@ -31,6 +32,7 @@ input.addEventListener("keydown", (event) => {
 nav.addEventListener("click", (event) => {
     if (event.target.matches(".sidebar-streamer-button")) {
         const streamer = event.target.textContent;
+        heading.textContent = event.target.textContent;
         streamFrame.src = generateSource(streamer);
     } else if (event.target.matches(".sidebar-delete-button")) {
         event.target.parentElement.remove();
