@@ -35,14 +35,6 @@ nav.addEventListener("click", (event) => {
         heading.textContent = event.target.textContent;
         streamFrame.src = generateSource(streamer);
     } else if (event.target.matches(".sidebar-delete-button")) {
-        /* if (
-            event.target.textContent.toLowerCase.includes(
-                heading.textContent.toLowerCase(),
-            )
-        ) {
-            streamFrame.src = "";
-            heading.textContent = "";
-        } */
         if (event.target.className.includes(heading.textContent)) {
             streamFrame.src = "";
             heading.textContent = "";
